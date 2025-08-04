@@ -27,8 +27,8 @@ from src.langsmith_integration import init_langsmith, is_langsmith_enabled
 # Initialize LangSmith tracing
 init_langsmith()
 
-# Initialize LangSmith client
-client = Client()
+# Set project name for tracing
+LANGSMITH_PROJECT = "ai_pipeline_demo"
 
 
 def initialize_session_state():
@@ -165,7 +165,7 @@ def initialize_system():
         return {"success": False, "error": str(e)}
 
 
-@traceable(project_name="Weather+PDF")
+@traceable(project_name=LANGSMITH_PROJECT)
 def process_query(query: str) -> Dict[str, Any]:
     """Process a user query through the agent pipeline."""
     try:
