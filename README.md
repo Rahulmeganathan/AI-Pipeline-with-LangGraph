@@ -79,7 +79,7 @@ LangGraph_querying/
 │   └── 📁 evaluation/               # Response evaluation
 │       ├── __init__.py
 │       └── evaluator.py             # LangSmith evaluation
-├── 📁 tests/                        # Test suite
+├── unit_tests/           # Test files and test suites
 │   ├── __init__.py
 │   ├── test_weather_service.py
 │   ├── test_rag_service.py
